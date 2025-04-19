@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee management system</title>
+    <link rel="stylesheet" href="src/style.css">
+   
+</head>
+<body>
+<!-- header -->
+    <div id="app">
+        <header>
+            <h1>Employee Database Management</h1>
+            <button class="createEmployee">Add Employee</button>
+        </header>
+    </div>
+<!-- Displays employee names and info -->
+   <div class="employees_con">
+    <div class="employees_list">
+        <h3>Employees List</h3>
+        
+    </div>
+    <div class="employee_info">
+        <h3>Employee Information</h3>
+    </div>
+   </div>
+
+   <div class="modal" id="employeeModal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <h2>Add New Employee</h2>
+      <form id="employeeForm">
+        <input type="text" placeholder="First Name" name="firstName" required />
+        <input type="text" placeholder="Last Name" name="lastName" required />
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="text" placeholder="Contact Number" name="contactNumber" required />
+        <input type="number" placeholder="Age" name="age" required />
+        <input type="text" placeholder="DOB" name="dob" required />
+        <input type="number" placeholder="Salary" name="salary" required />
+        <input type="text" placeholder="Address" name="address" required />
+        <input type="url" placeholder="Image URL" name="imageUrl" />
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+  </div>
+  
+
+
+   <script src="src/index.js"></script>
+</body>
+</html>

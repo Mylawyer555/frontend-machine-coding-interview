@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    padding: 0 20px;
+    font-family: sans-serif;   
+    overflow-x: hidden;
+    
+}
+:root {
+    --btn: #dbdbdb;
+    --btn-hover: #cacaca;
+    --item-bg: #f0f0f0;
+    --modal-bg: rgba(141, 141, 141, 0.541);
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--btn);
+    cursor: pointer;
+  }
+
+header > button:hover{
+    background-color: var(--btn-hover);
+}
+.employees_con {
+    max-width: 100%;
+    min-height: 450px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap; /* allow columns to stack on smaller screens */
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+}
+
+.employees_list{
+    width: 30%;
+    height: 100%;
+    border: 1px solid gray;
+    overflow-y: scroll;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+}
+.employee_info{
+    width: 50%;
+    height: 100%;
+    border: 1px solid gray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px 10px;
+   
+}
+.employees_list, .employee_info {
+    min-width: 300px;
+    flex: 1 1 45%; /* grow/shrink based on screen width */
+    height: auto;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.employees_list h3{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    
+}
+.employees_list li{
+    padding: 5px 10px;
+    background-color: rgb(247, 245, 245);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.employees_list li:hover{
+  background-color: darkslategrey;
+}
+
+.employee_info h3{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    
+}
+.employee_info p{
+    padding: 5px;
+
+}
+.employee_info button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: rgb(255, 138, 138);
+    color: white;
+    font-size: 14px;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  form input, form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: var(--btn);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  form button:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      height: auto;
+      align-items: flex-start;
+    }
+  
+    .employees_con {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .employees_list,
+    .employee_info {
+      width: 100%;
+      min-height: 300px;
+    }
+  
+    .modal-content {
+      width: 90%;
+      margin-top: 25%;
+    }
+  
+    form input, form button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
